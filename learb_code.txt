@@ -1,0 +1,1334 @@
+1.3
+c = 0
+if c <10:
+    c+=1
+    print(c)
+else:
+    print(c)
+//
+
+animal = "cat"
+if animal == "cat":
+    print("cat cat motherfucker")
+elif animal == "dog":
+    print("woof woof dogs here!)")
+else:
+    print(" i dont know this animal bitch")
+//
+
+import random
+
+a = ["dog","cat","hyi"]
+
+animal = random.choice(a)
+if animal == "cat":
+    print("cat cat motherfucker")
+elif animal == "dog":
+    print("woof woof dogs here!)")
+else:
+    print(" i dont know this animal bitch")
+//
+
+z = 4
+value = 23 if z >= 3 else print("syka bleit")
+print(value)            :: 23
+
+//
+print("suka") if 7>=5 else print("fuck you")
+
+//
+value = 1000
+if value >1000:
+    value -= value*0.1
+    print("Ваша цена с учетом скидки :", value)
+elif value>500:
+    value -= value*0.05
+    print("Ваша цена с учетом скидки :", value)
+elif value>100:
+    value -= value*0.03
+    print("Ваша цена с учетом скидки :", value)
+else:
+    print("Цена за ваш товар :" , value)
+//
+
+value = "5"
+print(None if value == "" else value)  :: 5
+
+value = "5"
+print(None if not value else value)
+//
+
+1.4
+counter = 5
+while counter>0:
+    print("Iteration, counter = ", counter)
+    counter -=1
+print(counter)
+::
+Iteration, counter =  5
+Iteration, counter =  4
+Iteration, counter =  3
+Iteration, counter =  2
+Iteration, counter =  1
+0
+//
+
+for number in range(5):
+    print(number)
+::
+0
+1
+2
+3
+4
+//
+
+for element in range(10):
+    if element == 3:
+        continue
+        print("нашлось")
+    if element == 5:
+        continue
+    print(element)
+
+print("____________")
+::
+0
+1
+2
+4           нету 3 и 5
+6
+7
+8
+9
+
+for element2 in range(10):
+    if element2 == 3:
+        break
+    if element == 5:
+        continue
+        print("не нашлось")
+    print(element2)
+::
+0
+1
+2
+//
+итерация по диапазону с выводов в консоль только четных чисел
+for number in range(102):
+    if number % 2 == 0  :
+        print(number)
+:: 0 2 4 6 8 10...
+
+counter = 0
+end_walue = 101
+while counter < end_walue:
+    if counter %2 == 0:
+        print(counter)
+    counter +=1
+:: 0 2 4 6 8 10
+//
+поменять буквы  l в слове hello на s
+word = "hello"
+
+for i in word:
+    if i == "l":
+        i = "s"
+    print(i)
+//
+Вывести в обратном порядке
+number = 99
+end_walue = 0
+while number>end_walue:
+    if number%5 == 0:
+        print(number)
+    number -= 1
+//
+
+1.5 списки
+
+my_list = list('sdfgsdg')
+print(my_list)
+
+my_list = ['s', 35 , 'f', True , 's', 'd', 'g']
+print(my_list)
+print(my_list[3])
+::
+['s', 'd', 'f', 'g', 's', 'd', 'g']
+['s', 35, 'f', True, 's', 'd', 'g']
+True
+//
+
+срезы
+my_list=[1,2,3,4,5]
+print(my_list[4])
+::
+5
+
+my_list=[1,2,3,4,5]
+print(my_list[3])
+::
+4
+
+my_list=[1,2,3,4,5]
+print(my_list[0:3])
+::
+[1, 2, 3]
+
+my_list=[1,2,3,4,5]
+print(my_list[2::2])
+:: [3, 5]
+//
+
+append !!
+my_list=[1,2,3,4,5]
+my_list.append('fsd')
+print(my_list)
+:: [1, 2, 3, 4, 5, 'fsd']
+
+clear!!
+my_list=[1,2,3,4,5]
+my_list.clear()
+print(my_list)
+:: []
+//
+extend !!
+my_list=[1,2,3,4,5]
+second_list = [3,4,5]
+my_list.extend(second_list)
+print(my_list)
+:: [1, 2, 3, 4, 5, 3, 4, 5]
+
+my_list=[1,2,3,4,5]
+second_list = [3,6,5]
+my_list.extend(second_list)
+print(my_list)
+print(my_list.index(6))
+:: [1, 2, 3, 4, 5, 3, 6, 5]
+6
+
+my_list=[1,2,3,4,5]
+second_list = [3,6,5]
+my_list.extend(second_list)
+print(my_list.index(1))
+:: 0
+
+my_list=[1,2,3,4,5]
+second_list = [3,6,5]
+print(my_list+second_list)
+:: [1, 2, 3, 4, 5, 3, 6, 5]
+//
+pop()
+
+my_list=[1,2,3,4,5]
+remove_element = my_list.pop(1)   удаляет элемент и записывает его в remove_element
+print(remove_element)
+print(my_list)
+:: 2
+[1, 3, 4, 5]
+
+reverse
+my_list=[1,2,3,4,5]
+my_list.reverse()
+print(my_list)
+::[5, 4, 3, 2, 1]
+//
+
+sort
+my_list=[1,6,2,3,4,5]
+my_list.sort()
+print(my_list)
+:: [1, 2, 3, 4, 5, 6]
+
+my_list=[1,6,2,3,4,5]
+my_list.sort(reverse=True)
+print(my_list)
+:: [6, 5, 4, 3, 2, 1]
+
+my_list=["a","f","b"]
+my_list.sort()
+print(my_list)
+:: ['a', 'b', 'f']
+//
+
+my_list=[1,2,3,4,5,6,7,8]
+for element in my_list:
+    print(element)
+:: 1
+2
+3
+4
+5
+6
+7
+8
+//
+найти и удалить все четные элементы списка
+my_list=[1,2,3,4,5,6,7,8]
+even_list= []
+for element in my_list:
+    if element%2 == 0:
+        even_list.append(element)
+print(even_list)
+::[2, 4, 6, 8]
+
+возвсти все элементы списка в квадрат
+my_list=[1,2,3,4,5,6,7,8]
+even_list= []
+for element in my_list:
+    z= element*element
+    even_list.append(z)
+print(even_list)
+:: [1, 4, 9, 16, 25, 36, 49, 64] сделал я
+
+my_list=[1,2,3,4,5,6,7,8]
+even_list= []
+for element in my_list:
+    even_list.append(element**2)
+print(even_list)
+:: [1, 4, 9, 16, 25, 36, 49, 64] пример препода
+
+найти масимальный элемент списка
+my_list=[0,2,3,10,4,5,6,7,8]
+
+my_list.sort(reverse=True)
+print(my_list[0])
+:: 10               мое решение
+
+my_list=[0,2,3,10,4,5,6,7,8]
+max_element = my_list[0]
+for element in my_list:
+    if element > max_element:
+        max_element = element
+print(max_element)
+:: 10               решиние препода
+//
+
+1.6 словами
+my_dict = {'key': 'value'}
+print(my_dict)
+:: {'key': 'value'}
+
+my_dict = {'key': 'value'}
+print(my_dict['key'])
+:: value
+
+my_dict = {'key': 'value'}
+print(my_dict.get('key'))
+:: value
+
+my_dict = {'key': 'value'}
+print(my_dict.get('ke2y'))
+:: None
+
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+print(my_dict.get(12 , -1))
+:: -1
+//
+
+clear
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+my_dict.clear()
+print(my_dict)
+:: {}
+
+items
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+print(my_dict.items())
+:: dict_items([('key', 'value'), (1, 'hey'), (0.2, True)])
+
+pop()
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+my_dict.pop('key')
+print(my_dict)
+:: {1: 'hey', 0.2: True}
+
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+print(my_dict.pop('key'))
+:: value возвращает значение но удаляет полностью всю пару
+
+popitem()
+my_dict = {'key': 'value', 1 : 'hey' , 0.2: True}
+print(my_dict.popitem())
+:: (0.2, True) возвращает самую последнюю пару которая стоит в конце словаря так-же удаляя ее
+
+update
+my_dict = {1:3, 2:3,5:2}
+my_dict.update({6:30})
+print(my_dict)
+:: {1: 3, 2: 3, 5: 2, 6: 30}
+
+my_dict = {1:3, 2:3,5:2}
+my_dict2 = {4:5, 6:34}
+my_dict.update(my_dict2)
+print(my_dict)
+:: {1: 3, 2: 3, 5: 2, 4: 5, 6: 34}
+
+values
+my_dict = {1:3, 2:3,5:2}
+my_dict2 = {4:5, 6:34}
+my_dict.update(my_dict2)
+print(my_dict.values())
+:: dict_values([3, 3, 2, 5, 34]) выведет все values
+//
+
+my_list = [1,2,3,34,6,634,2,4,566,5,8,5,4,4,4,4,4]
+a = 4
+my_dict = {a : 0}
+for values in my_list:
+    if values == a:
+        my_dict[a] +=1
+print(my_dict)
+:: {4: 6}           посчитать с помощью словаря сколько раз элемент повторяеться с списке
+
+my_list = [1,2,3,34,6,634,2,4,566,5,8,5,4,4,4,4,4]
+my_dict = {}
+for values in my_list:
+    if values in my_dict:
+        my_dict[values] +=1
+    else:
+        my_dict[values] = 1
+print(my_dict)
+:: {1: 1, 2: 2, 3: 1, 34: 1, 6: 1, 634: 1, 4: 6, 566: 1, 5: 2, 8: 1}  добавление всех элементов как ключей и количетсво их повторений
+
+my_list = [1,2,3,34,6,634,2,4,566,5,8,5,4,4,4,4,4]
+my_dict = {}
+for values in my_list:
+    if values in my_dict:
+        my_dict[values] +=1
+    else:
+        my_dict[values] = 1
+for key , value in my_dict.items():
+    print("key : ", key,"Values :",value)
+:: key :  1 Values : 1
+key :  2 Values : 2
+key :  3 Values : 1
+key :  34 Values : 1
+key :  6 Values : 1
+key :  634 Values : 1
+key :  4 Values : 6
+key :  566 Values : 1
+key :  5 Values : 2
+key :  8 Values : 1                     вывести красиво ключ значени
+//
+
+my_dict = {1:1,2:2,3:3,4:4,5:5}
+for key , values in my_dict.items():
+    if key%2==0:
+        print(key,values)
+:: 2 2
+4 4                     пройтись по словарю и вывести все значения у который четный ключ
+//
+
+удалить все ключи название которых начинаеться с буквы а
+my_dict = {'apple':1,'karra':2,'zero':3,'fa':4,'ae':5}
+new_dict = {}                                                   создаешь новый словарь и записываешь данные туда
+for key , values in my_dict.items():
+    if key[0] != 'a':
+        new_dict[key] = values
+print(new_dict)
+//
+
+1.7 множества
+
+a = {1,2,3,4,5}
+a.clear()
+print(a)
+:: set()    - пустое множество
+//
+
+a = {1,2,3,4,5}
+a.pop()
+print(a)
+:: {2, 3, 4, 5}
+
+a = {1,2,3,4,5}
+a.discard(2)
+print(a)
+:: {1, 3, 4, 5}
+
+a = {1,2,3,4,5}
+a.remove(6)
+print(a)
+:: ошибка
+
+a = {1,3,2,4,5}
+b = {3,5,7}
+print(a.union(b))
+:: {1, 2, 3, 4, 5, 7}
+
+a = {1,3,2,4,5}
+b = {3,5,7}
+print(a.intersection(b))
+:: {3, 5}
+
+difference
+a ={1,3 , 2,4,5}
+b = {3,5,7 }
+print(a.difference(b))
+:: {1, 2, 4}
+
+a ={1,3 , 2,4,5}
+b = {3,5,7 }
+print(b.difference(a))
+:: {7}
+
+in
+a ={1,3 , 2,4,5}
+print(1 in a)
+True
+
+a ={1,3 , 2,4,5}
+print(10 in a)
+False
+
+кортеж
+a = (1,2,3,4)
+print(a)
+::(1, 2, 3, 4)
+
+a = (1,2)
+x,y = a
+print(x,y)
+:: 1 2
+
+a = (1,2)
+x,y = a
+print(x,y)
+x, y = y, x
+print(x,y)
+:: 1 2
+2 1
+
+for elem1, elem2 in [(1,2), (2,4)]:
+    print(elem1, elem2)
+:: (1,2)
+   (2,4)
+
+
+a = [(1,2),(3,4)]
+for first, second in a:
+    print(first,second)
+:: 1 2
+3 4
+
+a = [(1,2,3),(3,4,3)]
+for first, second, third in a:
+    print(first,second , third)
+::
+1 2 3
+3 4 3
+////
+
+Функции
+
+def print_sum():
+    print(2+2)
+print_sum()
+:: 4
+
+def print_msg(msg):
+    print(msg)
+
+
+print_msg("hello")
+::hello
+
+def func(a):
+    print(a * 10)
+
+
+func(2)
+:: 20
+
+def func(a, b, c):
+    print(a + b + c)
+
+
+func(2,2,3)
+:: 7
+
+def func(a, b, c):
+    return a+b+c
+
+
+result = func(2,2,3)
+print(result)
+:: 7
+
+
+Найдите максимальное значение в передаваемой в функцию списк и верните его, если оно больше 0, в ином случает верните сообщение о том, что сисло меньше 0
+list = [1,2,3,4,5,6,-1,3,0]
+list2 =[]
+
+def func(list,list2):
+    for a in list:
+        if a>0:
+            list2.append(a)
+            print("Число ", a ,"Больше 0 " )
+        elif a<0:
+            print("Число" ,a , "Меньше 0" )
+        elif a==0:
+            print("Ноль на ноль делить нельзя :((")
+        else:
+            print("Ошибка 1")
+
+    list2.sort(reverse=True)
+    print(list2[0])
+
+func(list ,list2 )
+:: Число  1 Больше 0
+Число  2 Больше 0
+Число  3 Больше 0
+Число  4 Больше 0
+Число  5 Больше 0
+Число  6 Больше 0
+Число -1 Меньше 0
+Число  3 Больше 0
+Ноль на ноль делить нельзя :((
+6                                       мое решение
+
+
+def get_max_values(list_values):
+    max_value = list_values[0]
+    for element in list_values:
+        if element > max_value:
+            max_value = element
+    return max_value if max_value > 0 else "Max value is less then zero "
+
+list = [1,2,3,4,5,6,-1,3,0]
+z = get_max_values(list)
+print(z)
+:: 6                                    решение препода
+
+
+Верните количество букв в слове, которое передаеться в параметрах
+def get_word(a):
+    b = len(a)
+    return b
+a = "hello"
+z = get_word(a)
+print(z)
+:: 5                                        мое решение
+
+def get_word(a):
+    return len(a)
+a = "hello"
+z = get_word(a)
+print(z)
+:: 5                                        решение препода
+
+
+Напишите функцию, которая возводит в степень число, которое передаеться в параметрах, если степень не отрицательный.
+Первый параметр число, второй - степень в которую его нужно возвести
+
+def func_stepen(osnova, n):
+    if osnova <0 or n <0:
+        print("fuck you")
+    else:
+        stepen = osnova**n
+        return stepen
+z = func_stepen(osnova=3,n=5)
+print(z):: 243                              мое решение
+
+
+def func_stepen(osnova, n):
+    if n>=0:
+        return osnova**n
+z = func_stepen(osnova=3,n=5)
+print(z)
+:: 243                                      решение препода
+
+
+функции 2
+
+# вложенные функции
+def hello_1():
+    def hello_2():
+        return 5
+    print(hello_2())
+hello_1()
+:: 5
+
+
+анонимные функции
+my_list = [1,2,3,4,5]
+my_list.sort(key=lambda x: -x)
+print(my_list) :: [5, 4, 3, 2, 1]
+
+рекурсия
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n* factorial(n-1)
+print(factorial(4)) :: 24
+
+
+напишите функцию, где дано натуралное число n. Выведите все числа от 1 до n
+
+def all(n):
+    k = list()
+    k.append(n)
+    while n>1:
+        n-=1
+        k.append(n)
+        k.sort()
+    return k
+print(all(10))          :: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] мое решение
+
+
+
+def numbers(n):
+    for number in range(1,n+1):
+        print(number)
+
+numbers(10) :: 1
+2
+3
+4
+5
+5...                решение препода
+
+2. Напишите функцию для просчета площади прямоугольника, в параметрах передаються высота и длина
+
+def recrangle_my(a,b):
+    s = a*b
+    return s
+
+print(recrangle_my(3,4))    :: мой ответ
+
+
+def recrangle(height, length):
+    return height*length
+h1 = 10
+l1 = 45
+area1 = recrangle(h1,l1)
+print(area1)                :: ответ препода
+
+
+
+
+
+
+
+
+
+
+
+
+12.07.22 ООП
+
+class Human:
+    def __init__(self, age):
+        self.age = age
+
+    def say_hello(self):
+        print("hello, i am {}".format(self.age))
+
+human = Human(age=12)
+
+human.say_hello()
+
+class HumanExtended(Human):
+    def __init__(self, age ,name):
+        super().__init__(age)
+        self.name = name
+
+    def say_hello(self):
+        print("Hi, im {} and I am {}".format(self.name, self.age))
+
+human2 = HumanExtended(age=54 , name="LeHa")
+human2.say_hello()
+
+
+class A:
+    def __init__(self):
+        self.a = 10
+
+class B:
+    def __init__(self):
+        self.b = 5
+
+class C(A,B):
+    def __init__(self):
+        A.__init__(self)
+        B.__init__(self)
+
+c = C()
+print(c.a)
+print(c.b)
+
+
+
+?///////////////////////////////////////////////
+class Car:
+    def __init__(self, marka, color, motor):
+        self.marka = marka
+        self.color = color
+        self.motor = motor
+
+    @staticmethod
+    def ride_forward():
+        print("drive forward")
+
+    @staticmethod
+    def ride_back():
+        print("drive back")
+
+
+class CarLeftAndRight(Car):
+    @staticmethod
+    def ride_left():
+        print("drive left")
+
+    @staticmethod
+    def ride_right():
+        print("drive right")
+
+
+corola = CarLeftAndRight(marka="corolla", color="red", motor=1.5)
+
+corola.ride_forward()
+corola.ride_back()
+corola.ride_left()
+corola.ride_back()
+
+
+/////////////////////////////////////////
+
+class FluingCar(CarLeftAndRight, Plane):
+    def __init__(self, marka, color, motor, model ):
+        CarLeftAndRight.__init__(self, marka, color, motor)
+        Plane.__init__(self, model)
+
+
+fc = FluingCar(marka="LENA", color="red", motor=1.3, model="gg")
+
+/////////////////////////////////////////////////////////////////////
+class Car:
+    def __init__(self, marka, color, motor):
+        self.marka = marka
+        self.color = color
+        self.motor = motor
+
+    @staticmethod
+    def ride_forward():
+        print("drive forward")
+
+    @staticmethod
+    def ride_back():
+        print("drive back")
+
+
+class CarLeftAndRight(Car):
+    @staticmethod
+    def ride_left():
+        print("drive left")
+
+    @staticmethod
+    def ride_right():
+        print("drive right")
+
+
+corola = CarLeftAndRight(marka="corolla", color="red", motor=1.5)
+
+corola.ride_forward()
+corola.ride_back()
+corola.ride_left()
+corola.ride_back()
+
+print("")
+
+class Plane():
+    def __init__(self, model):
+        self.model = model
+
+    @staticmethod
+    def flying():
+        print("plane frying")
+
+    @staticmethod
+    def land():
+        print("landing")
+
+Plane.flying()
+
+print("")
+
+class FluingCar(CarLeftAndRight, Plane):
+    def __init__(self, marka, color, motor, model ):
+        CarLeftAndRight.__init__(self, marka, color, motor)
+        Plane.__init__(self, model)
+
+
+fc = FluingCar(marka="LENA", color="red", motor=1.3, model="gg")
+fc.flying()
+fc.ride_left()
+fc.ride_back()
+fc.ride_forward()
+
+////////////////////////////////////
+
+# 1. Написать класс Cat, создать ему атрибуты size, color, cat_type.
+# 2. При создании объекта класса передавать в конструктор color и cat_type, которые
+# записываются в соответсвующие атрибуты.
+# 3. Сделать метод set_size, в котором если self.cat_type это “indoor”, то self.size = ‘small’ иначе
+# self.size=’undefined’. Протестируйте разные варианты.
+# 4. Сделать класс Tiger, унаследованный от класса Cat.
+# 5. Переопределить метод set_size таким образом чтобы если self.cat_type это ‘wild’, то self.size
+# = ‘big’ иначе self.size=’undefined’
+
+class Cat():
+    def __init__(self, size, color, cat_type):
+        self.size = size
+        self.color = color
+        self.cat_type = cat_type
+
+    def color2(self):
+        print(self.color)
+
+    def cat_type2(self):
+        print(self.cat_type)
+
+    def set_size2(self):
+        if self.cat_type == "indor":
+            self.cat_type = "indor"
+            print(self.cat_type)
+        else:
+            self.size = "undefined"
+            print(self.size)
+
+x = Cat(size="small", color="red", cat_type="indor2")
+x2 = Cat(size="toll", color="green", cat_type= "indor")
+
+x.color2()
+print("")
+x.set_size2()
+x2.set_size2()
+
+
+class Tiger(Cat):
+    def __init__(self, size, color, cat_type):
+        Cat.__init__(self, size, color, cat_type)
+
+    def set_size2(self):
+        if self.cat_type == "wild":
+            self.cat_type = "big"
+            print(self.cat_type)
+        else:
+            self.size = "undefined"
+            print(self.size)
+
+
+tiger = Tiger(size="small",color="red",cat_type="wild")
+
+print("")
+
+tiger.set_size2()
+
+::
+
+red
+
+undefined
+indor
+
+big
+
+////////////////////////////////////
+
+class Test:
+    def __init__(self, test_value):
+        self._public_val = test_value
+
+test = Test(test_value=10)
+print(test._public_val)
+
+::
+10
+
+
+////////////////////////////////////
+
+
+class Test:
+    def __init__(self, test_value):
+        self.__private_val = test_value
+
+    def get_private_val(self):
+        return self.__private_val
+
+    @staticmethod
+    def __private_function():
+        print("Private function")
+
+    def call_private(self):
+        self.__private_function()
+
+test = Test(test_value=10)
+print(test.get_private_val())
+
+#test.__private_function()
+test.call_private()
+
+10
+Private function
+
+////////////////////////////////////
+
+
+class User:
+    def __init__(self, name):
+        self.__name2 = name
+
+    @property
+    def name2(self):
+        return self.__name2
+
+user = User(name="LENA")
+print(user.name2)
+
+////////////////////////////////////
+
+class User:
+    def __init__(self, name):
+        self.__name2 = name
+
+    @property
+    def name2(self):
+        return self.__name2
+
+    @name2.setter
+    def name2(self,value):
+        self.__name2 = value
+
+user = User(name="LENA")
+user.name2 = "bob"
+print(user.name2)
+bob
+
+////////////////////////////////////
+class User2:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        print("      property")
+        return self.__name
+
+k = User2(name="ff")
+
+print(k.name)
+      property
+ff
+
+////////////////////////////////////
+class Worker:
+    RIGHT = "Equal"
+    def __init__(self, working_class):
+        self.__salary_map = {
+            "A": 100,
+            "B": 200,
+            "C": 500
+        }
+        self.__salary = self.__get_salary(working_class)
+
+    def __get_salary(self, working_class):
+        return self.__salary_map.get(working_class, 0)
+
+    @property
+    def salary(self):
+        return self.__salary
+
+
+w1 = Worker('A')
+print(w1.salary)
+::
+100
+
+////////////////////////////////////
+class Worker:
+    RIGHT = "Equal"
+    def __init__(self, working_class):
+        self.__salary_map = {
+            "A": 100,
+            "B": 200,
+            "C": 500
+        }
+        self.__salary = self.__get_salary(working_class)
+
+    def __get_salary(self, working_class):
+        return self.__salary_map.get(working_class, 0) === если не находит ключ то возвращает 0
+
+    @property
+    def salary(self):
+        return self.__salary
+
+
+w1 = Worker('A')
+
+w2 = Worker("X")
+
+print(w1.salary)
+print(w2.salary)
+::
+100
+0
+////////////////////////////////////
+class Worker:
+    RIGHT = "Equal"
+    SALARY_MAP = {
+        "A": 100,
+        "B": 200,
+        "C": 500
+    }
+    def __init__(self, working_class):
+        self.__salary = self.__get_salary(working_class)
+
+    @staticmethod
+    def __get_salary(working_class):
+        return Worker.SALARY_MAP.get(working_class, 0)
+
+    @property
+    def salary(self):
+        return self.__salary
+
+
+w1 = Worker('A')
+
+w2 = Worker("X")
+
+print(w1.salary)
+print(w2.salary)
+::
+100
+0
+////////////////////////////////////
+class User:
+    def __init__(self, name):
+        self.__name2 = name
+
+    @property
+    def name2(self):
+        return self.__name2
+
+    @name2.setter
+    def name2(self,value):
+        self.__name2 = value
+
+user = User(name="LENA")
+user.name2 = "bob"
+#print(user.name2)
+
+class Worker:
+    RIGHT = "Equal"
+    SALARY_MAP = {
+        "A": 100,
+        "B": 200,
+        "C": 500
+    }
+    def __init__(self, working_class):
+        self.__salary = self.__get_salary(working_class)
+
+    @staticmethod
+    def __get_salary(working_class):
+        return Worker.SALARY_MAP.get(working_class, 0)
+
+    @property
+    def salary(self):
+        return self.__salary
+
+
+w1 = Worker('A')
+
+w2 = Worker("X")
+
+print(w1.salary)
+print(w2.salary)
+
+
+
+
+class User2:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        print("      property")
+        return self.__name
+
+k = User2(name="ff")
+
+#print(k.name)
+
+////////////////////////////////////
+
+Написать класс TextProcessor для обработки текстовых данных. Класс должен иметь публичный метод
+get_clean_string, который удалит все знаки препинания из строки, которую в него передают
+аргументом и приватный метод is_punktuation, который непосредственно проверяет символ на
+равенство со знаками пунктуации и возвращает True/False, которые в свою очередь являются
+приватным или защищенным атрибутом класса.
+2. Написать класс TextLoader, который имеет приватным атрибутом text_processor объект класса, что
+был создан в задаче 1. Новый класс будет иметь приватный атрибут clean_string и публичный метод
+set_clean_text, который будет вызывать метод класса TextProcessor через свой атрибут text_processor и
+записывать значение в clean_string. Сам же атрибут clean_string будет иметь property с
+дополнительным выводом в консоль того, что выводится уже очищенная строка.
+3. Написать класс DataInterface, который будет иметь своим защищенным атрибутом объект класса
+TextLoader и публичный метод process_texts, который будет принимать список строк, в цикле
+обработает каждую и выведет ее значение в консоль
+
+
+class TextProcessor:
+    def __init__(self):
+        self._punktuation = '.,!?:;'
+
+    def __is_punktuation(self, char):
+        return char in self._punktuation
+
+    def get_clean_string(self, text):
+        clean_text = ""
+        for char in text:
+            if self.__is_punktuation(char):
+                continue
+            clean_text +=char
+        return  clean_text
+
+p = TextProcessor()
+#print(p.get_clean_string("Hello? world"))
+
+class TextLoader:
+    def __init__(self):
+        self.__text_processor = TextProcessor()
+        self.__clean_string = None
+
+    def set_clean_string(self, text):
+        self.__clean_string = self.__text_processor.get_clean_string(text)
+
+    @property
+    def clean_string(self):
+        print("clean string is {}".format(self.__clean_string))
+        return self.__clean_string
+
+class DataInterface():
+    def __init__(self):
+        self.__text_loader = TextLoader()
+
+    def process_texts(self, texts):
+        cleam_texts = []
+        for text in texts:
+            self.__text_loader.set_clean_string(text)
+            clean = self.__text_loader.clean_string
+            cleam_texts.append(clean)
+        return cleam_texts
+
+
+di = DataInterface()
+t = [' fdsfasd.?fa?s!d/23412/.', "HELLO? ???? ,<,. wefq"]
+di.process_texts(t)
+:::
+clean string is  fdsfasdfasd/23412/
+clean string is HELLO  < wefq
+
+////////////////////////////////////
+
+# Написать класс, который описывает пользователя (class User), сделать ему приватный
+# атрибут age, который передается в конструктор, публичный атрибут name, который так же
+# передается в конструктор.
+# 2. Написать getter и setter для атрибута age.
+# 3. Добавить в setter проверку на валидный возраст (не отрицательное, целое число)
+
+class User:
+    def __init__(self, age, name ):
+        self.__age = age
+        self.name = name
+
+    @property
+    def getter_age(self):
+        return self.__age
+
+    @getter_age.setter
+    def setter_age(self, bob):
+        if self.__age <=0 :
+            print("get back")
+        else:
+            return self.__age
+            print(" g ")
+
+
+print("")
+print("")
+k = User(age=112,name="LENA")
+k.getter_age
+
+k.setter_age = "LEHA is not LENA"
+print(k.getter_age)
+print(k.setter_age)
+::
+112
+112
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
